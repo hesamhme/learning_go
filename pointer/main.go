@@ -10,13 +10,22 @@ type Person struct {
 
 func main() {
 	p := Person{"Hesam", "Hashemi", 30}
-	fmt.Println(p)
-	// change type to a pointer to the same type with &
-	ChangeName(&p)
-	fmt.Println(p)
+	PersonAdd := &p
+	fmt.Println(PersonAdd)
 
+	var x *uint
+	y := *x // de-ref
+	z := &y // take address to pointer
+	fmt.Println(z)
 }
 
-func ChangeName(p *Person) {
-	p.FirstName = "ahmad"
-}
+//	fmt.Println(p)
+//	// change type to a pointer to the same type with &
+//	ChangeName(&p)
+//	fmt.Println(p)
+//
+//}
+//
+//func ChangeName(p *Person) {
+//	p.FirstName = "ahmad"
+//}
